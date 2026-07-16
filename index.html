@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Video Library</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0f0f0f;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            color: #aaa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .video-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .video-card:hover {
+            transform: translateY(-4px);
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .video-info {
+            padding: 1rem;
+        }
+        .video-info h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+        }
+        .video-info p {
+            margin: 0;
+            color: #606060;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        .watch-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #ff0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .watch-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Video Channel</h1>
+        <p>A collection of my latest videos and updates</p>
+    </header>
+
+    <div class="container">
+        <div class="video-grid">
+            
+            <!-- VIDEO CARD 1 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <!-- Replace the ID 'dQw4w9WgXcQ' with your actual YouTube video ID -->
+                    <iframe src="https://www.youtube.com/embed/nFA2vDVB30U" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>PD Master Taipei 2024</h3>
+                    <p>A short description of what this video is about. Introduce your content here!</p>
+                    <a class="watch-link" href="https://www.youtube.com/watch?v=nFA2vDVB30U" target="_blank">Watch on YouTube →</a>
+                </div>
+            </div>
+
+            <!-- VIDEO CARD 2 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <!-- Replace the ID 'dQw4w9WgXcQ' with your second YouTube video ID -->
+                    <iframe src="https://www.youtube.com/embed/Ua9X9tiTcUU" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Morrisville TaiJi 2026 June 13</h3>
+                    <p>Another description detailing the focus of your second video.</p>
+                    <a class="watch-link" href="https://www.youtube.com/watch?v=Ua9X9tiTcUU" target="_blank">Watch on YouTube →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
